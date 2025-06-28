@@ -26,7 +26,7 @@ class HomePage extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          "Welcome to the Home Page " + user!.email!,
+          "Welcome to the Home Page ${user!.email!}",
           style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
         ),
       ),

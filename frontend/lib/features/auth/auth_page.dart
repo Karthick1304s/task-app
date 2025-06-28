@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:frontend/pages/home_page.dart';
 import 'package:frontend/features/auth/pages/login_page.dart';
+import 'package:frontend/screans/note_list.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -17,7 +17,7 @@ class AuthPage extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             child = const Center(child: CircularProgressIndicator());
           } else if (snapshot.hasData) {
-            child = HomePage();
+            child = NoteList();
           } else {
             child = const LoginPage();
           }
